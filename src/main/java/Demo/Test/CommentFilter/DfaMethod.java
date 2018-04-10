@@ -98,6 +98,7 @@ public class DfaMethod {
                 if(i == key.length()-1){
                     nowMap.put("isEnd","1");
                 }
+                System.out.println(111);
             }
         }
 
