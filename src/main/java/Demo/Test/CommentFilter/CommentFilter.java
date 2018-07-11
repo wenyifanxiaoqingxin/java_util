@@ -89,7 +89,7 @@ public class CommentFilter {
         while (iterator.hasNext()) {
             word = iterator.next();
 //            replaceString = getReplaceChars(replaceChar, word.length());
-            resultTxt = resultTxt.replaceAll(word, "<font>"+word+"</font>");
+            resultTxt = resultTxt.replaceAll(word, replaceChar);
         }
 
         return resultTxt;

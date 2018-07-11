@@ -10,7 +10,7 @@ public class DfaMethod {
 
 
      private static String path = "/Users/crionline/Desktop/2.txt";
-    private static String enCoding = "utf-8";
+    private static String enCoding = "gbk";
 
     public HashMap sensitiveWordMap;
 
@@ -98,7 +98,6 @@ public class DfaMethod {
                 if(i == key.length()-1){
                     nowMap.put("isEnd","1");
                 }
-                System.out.println(111);
             }
         }
 

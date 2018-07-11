@@ -10,7 +10,7 @@ public class Test {
 
 
         CommentFilter commentFilter = new CommentFilter();
-        String sensitiveWord= commentFilter.markSensitiveWord(ss,1);
+        String sensitiveWord= commentFilter.markSensitiveWord(ss,2);
         System.out.println(sensitiveWord);
     }
 }

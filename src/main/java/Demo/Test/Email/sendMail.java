@@ -71,7 +71,7 @@ public class sendMail {
             mimeMailMessage.setSubject("i am fx!");
 
             //具体消息体
-            bodyPart.setText("你接收到了吗？");
+            bodyPart.setText("你接收到了吗？这是抽奖的页面。试试我的小程序");
 
             //多重消息
             Multipart multipart = new MimeMultipart();
@@ -81,7 +81,7 @@ public class sendMail {
 
             //附件
             bodyPart = new MimeBodyPart();
-            String fileName = "/Users/Destop/1.txt";
+            String fileName = "/Users/crionline/Desktop/学习/抽奖/prize.zip";
             DataSource source =new FileDataSource(fileName);
 
             bodyPart.setDataHandler(new DataHandler(source));
