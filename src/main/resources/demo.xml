@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WORLD>
+    <country name="中国">
+        <city>商丘</city>
+        <province>河南</province>
+        <area>3000平方千米</area>
+        <people>1亿</people>
+    </country>
+    <country name="美国">
+        <city>纽约</city>
+        <province>曼哈顿区</province>
+        <area>789平方千米</area>
+        <people>851万</people>
+    </country>
+</WORLD>

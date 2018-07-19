@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="car" class="Demo.Test.xmlDemo.BMWcar">
+    </bean>
+    <bean id="people" class="Demo.Test.xmlDemo.People">
+        <property name="car" bean="car"></property>
+    </bean>
+</beans>
