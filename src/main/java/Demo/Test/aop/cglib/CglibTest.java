@@ -6,8 +6,9 @@ package Demo.Test.aop.cglib;
 public class CglibTest {
 
     public static void main(String[] args) {
+        Base base = new Base();
         CglibProxy cglibProxy = new CglibProxy();
-        Base base = ProxyFactory.getInstance(cglibProxy);
-        base.eat();
+        Base baseCglib = (Base) cglibProxy.getInstance(base);
+        baseCglib.eat();
     }
 }

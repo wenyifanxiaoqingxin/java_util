@@ -6,7 +6,7 @@ package Demo.Test.Bingfa;
 public class SellTicket {
     public static void  main(String[] args){
 
-        Supervene supervene = new Supervene();
+        Supervene supervene = new Supervene(1,10);
 
         Thread t1 = new Thread(supervene,"one window");
         Thread t2 = new Thread(supervene,"two window");
@@ -15,8 +15,5 @@ public class SellTicket {
         t1.start();
         t2.start();
         t3.start();
-
-
-        String s = "q11";
     }
 }
