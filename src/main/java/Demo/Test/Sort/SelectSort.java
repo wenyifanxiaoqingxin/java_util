@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int a[] = new int[]{3,4,5,2,5,7,12,4,7,8};
+        int a[] = new int[]{-1,3,2,5,9,6,3,4,5,10};
 
         System.out.println(Arrays.toString(selectSort(a)));
     }
@@ -22,11 +22,12 @@ public class SelectSort {
             for(int j =i+1;j<arr.length;j++){
                 if(arr[j]<arr[i]){
                     mindex = j;
+                    int temp = arr[i];
+                    arr[i] = arr[mindex];
+                    arr[mindex] = temp;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[mindex];
-            arr[mindex] = temp;
+
         }
 
         return arr;
