@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int a[] = new int[]{-1,3,2,5,9,6,3,4,5,10};
+        int a[] = new int[]{3,4,5,2,5,7,12,4,7,8};
 
         System.out.println(Arrays.toString(selectSort(a)));
     }
