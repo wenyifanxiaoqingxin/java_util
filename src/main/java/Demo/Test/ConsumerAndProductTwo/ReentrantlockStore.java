@@ -19,6 +19,7 @@ public class ReentrantlockStore implements StoreInterface{
 
     public void produce(int number){
         reentrantLock.lock();
+        try{
             while(linkList.size()+number>Max_Value){
                 System.out.println("【要生产的产品数量】:" + number + "\t【库存量】:"+ linkList.size() + "\t暂时不能执行生产任务!");
                 try {
@@ -27,9 +28,11 @@ public class ReentrantlockStore implements StoreInterface{
                     e.printStackTrace();
                 }
             }
-
-        reentrantLock.unlock();
-
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            reentrantLock.unlock();
+        }
         for (int i=0;i<number;i++ ){
             linkList.add(new Object());
         }
@@ -40,6 +43,7 @@ public class ReentrantlockStore implements StoreInterface{
 
     public void consume(int number){
         reentrantLock.lock();
+        try{
             while (linkList.size()<number){
                 System.out.println("【要消费的产品数量】:" + number + "\t【库存量】:"+ linkList.size() + "\t暂时不能执行消费任务!");
                 try {
@@ -48,8 +52,12 @@ public class ReentrantlockStore implements StoreInterface{
                     e.printStackTrace();
                 }
             }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            reentrantLock.unlock();
+        }
 
-        reentrantLock.unlock();
         for (int i=0;i<number;i++ ){
             linkList.remove();
         }
