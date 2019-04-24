@@ -1,5 +1,7 @@
 package Demo.Test.proxy.cglibProxy;
 
+import Demo.Test.PersonOne.Student;
+
 /**
  * Created by fx on 2019/1/2.
  */
