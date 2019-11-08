@@ -1,7 +1,7 @@
 package Demo.Test.BigInteger;
 
 /**
- * Created by fx on 2019/1/4.
+ * Created by fx on 2017/1/4.
  */
 public class BigInteger
 {
@@ -19,17 +19,22 @@ public class BigInteger
             if(bit[i] <= 9)	 //小于9不进位
             {
                 carray = 0;
-            }
-            else if(bit[i] >9 && i >9 && i >= pos)//大于9，且是最高位
+            }else if(bit[i] > 9 && i < pos) //大于9但不是最高位
             {
-                while(bit[i] > 9)//循环向前进位
+                carray = bit[i]/10;   //保存进位值
+                bit[i] = bit[i]%10;   //得到改位的一位数
+            }
+            else if(bit[i] > 9 && i >= pos) //大于9且是最高位
+            {
+                while(bit[i] > 9)     //循环向前进位
                 {
-                    carray = bit[i]/10;//计算进位值
-                    bit[i] = bit[i] % 10;//当前的第一位数
-                    i ++ ;
-                    bit[i] = carray;//在下一位保存进位值
+                    carray = bit[i]/10; //计算进位值
+                    bit[i] = bit[i]%10; //当前的一位数
+                    i++;
+                    bit[i] = carray;
                 }
             }
+
         }
     }
 
@@ -117,6 +122,6 @@ public class BigInteger
     public static void main(String[] args)
     {
         BigInteger bi = new BigInteger();
-        bi.doBigFactorial(100000);
+        bi.doBigFactorial(100);
     }
 }
