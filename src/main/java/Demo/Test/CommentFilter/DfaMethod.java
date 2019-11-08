@@ -9,7 +9,7 @@ import java.util.*;
 public class DfaMethod {
 
 
-     private static String path = "/Users/crionline/Desktop/2.txt";
+     private static String path = "C:/Users/fanxiao/Desktop/1.txt";
     private static String enCoding = "gbk";
 
     public HashMap sensitiveWordMap;
