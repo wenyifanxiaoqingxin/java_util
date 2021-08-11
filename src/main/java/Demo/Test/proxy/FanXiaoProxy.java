@@ -19,6 +19,7 @@ public class FanXiaoProxy {
 
         return (Person) Proxy.newProxyInstance(FanXiaoProxy.class.getClassLoader(),
                 fx.getClass().getInterfaces(), new InvocationHandler() {
+                @Override
                 public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
 //                    if(method.getName().equals("sing1")){
