@@ -13,7 +13,7 @@ package leetcode.top100;
  * 输出："bb"
  *
  */
-public class LongestPalindromic {
+public class LongestPalindromic5 {
 
     public static String longestPalindrome(String s) {
 
