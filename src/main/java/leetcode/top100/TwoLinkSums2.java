@@ -3,7 +3,7 @@ package leetcode.top100;
 import leetcode.top100.data.ListNode;
 
 /**
- * @description: 链表想加之和
+ * @description: 链表相加之和
  * @author: fanxiao
  * @email: fanxiao@koolearn.com
  * @date: 2021/7/30 2:26 下午
